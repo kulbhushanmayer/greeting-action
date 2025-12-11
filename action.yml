@@ -13,11 +13,13 @@ inputs:
 outputs:
   message:
     description: "Generated greeting message"
+    value: ${{ steps.greet.outputs.message }}
 
 runs:
   using: "composite"
   steps:
     - name: Print greeting
+      id: greet
       shell: bash
       run: |
         echo "Hello ${{ inputs.username }}, welcome to ${{ inputs.season }} season."
