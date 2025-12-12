@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v4
       - name: calling custom action yml
         id: greet
-        uses: ./
+        uses: kulbhushanmayer/greeting-action@v1.0
         with:
           username: Kulbhushan
       - name: Using Action output
